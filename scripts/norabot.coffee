@@ -4,8 +4,7 @@
   #
     module.exports = (robot) ->
       robot.hear /(.*)$/i, (msg) ->
-        room = msg.envelope.room
         text = msg.message.text
-        text_en = encodeURIComponent text
-        if room == "test"
-          msg.send room, "#{text} "
+        msg.send "#{text} "
+      robot.hear /badger/i, (res) ->
+        res.send "Badgers? BADGERS? WE DON'T NEED NO STINKIN BADGERS"
