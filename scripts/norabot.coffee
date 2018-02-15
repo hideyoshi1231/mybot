@@ -4,6 +4,12 @@
   #
     module.exports = (robot) ->
       flg = ""
+      robot.respond /(.*)$/i, (msg) ->
+        text = msg.message.text
+        msg.send "respond #{text} #{flg}"
+        flg = "respond"
+        return
+
       robot.hear /(.*)$/i, (msg) ->
         text = msg.message.text
         msg.send "#{text} #{flg}"
