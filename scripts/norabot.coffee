@@ -4,6 +4,7 @@
   #
     module.exports = (robot) ->
       flg = ""
+      robot.send "start"
       robot.respond /test/, (msg) ->
         text = msg.message.text
         msg.send "respond #{text} #{flg}"
