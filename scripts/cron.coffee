@@ -1,4 +1,4 @@
-cron = require('cron').CronJob
+cronJob = require('cron').CronJob
 
 module.exports = (robot) ->
 
